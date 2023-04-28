@@ -7,6 +7,6 @@ Route::post('/user-login', LoginController::class);
 
 Route::get('/user-dashboard', function () {
     return response()->json([
-        'massage' => 'User dashboard'
+        'massage' => 'User dashboard',
     ]);
 })->middleware('auth:user-api');

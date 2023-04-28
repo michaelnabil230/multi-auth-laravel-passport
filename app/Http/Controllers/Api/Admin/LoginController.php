@@ -18,7 +18,7 @@ class LoginController
 
         $admin = Admin::firstWhere('email', $request->email);
 
-        if (!Hash::check($request->password, $admin->password)) {
+        if (! Hash::check($request->password, $admin->password)) {
             throw ValidationException::withMessages([
                 'email' => ['The provided credentials are incorrect.'],
             ]);

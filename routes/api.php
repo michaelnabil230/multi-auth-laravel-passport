@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/dashboard', function () {
     return response()->json([
-        'massage' => 'General dashboard'
+        'massage' => 'General dashboard',
     ]);
 })->middleware('auth:user-api,admin-api');
 
-require __DIR__ . '/admin-api.php';
+require __DIR__.'/admin-api.php';
 
-require __DIR__ . '/user-api.php';
+require __DIR__.'/user-api.php';

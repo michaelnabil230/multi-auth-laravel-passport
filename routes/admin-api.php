@@ -7,6 +7,6 @@ Route::post('/admin-login', LoginController::class);
 
 Route::get('/admin-dashboard', function () {
     return response()->json([
-        'massage' => 'Admin dashboard'
+        'massage' => 'Admin dashboard',
     ]);
 })->middleware('auth:admin-api');
